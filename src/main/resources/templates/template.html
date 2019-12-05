@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+  <meta charset="UTF-8">
+  <title>Person List</title>
+</head>
+<body>
+
+<div>
+  <p>stgのperson一覧</p>
+  <div th:each="stgPerson:${stgPersonList}">
+    id: <p th:text="${stgPerson.id}"></p>
+    名前: <p th:text="${stgPerson.name}"></p>
+    年齢: <p th:text="${stgPerson.age}"></p>
+  </div>
+
+  <p>prodのperson一覧</p>
+
+  <div th:each="prodPerson:${prodPersonList}">
+    id: <p th:text="${prodPerson.id}"></p>
+    名前: <p th:text="${prodPerson.name}"></p>
+    年齢: <p th:text="${prodPerson.age}"></p>
+  </div>
+</div>
+</body>
+</html>
